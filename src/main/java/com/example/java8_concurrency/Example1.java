@@ -36,7 +36,7 @@ public class Example1 {
 				return result;
 			}).forEach(elements -> {
 				for(Element e: elements) {
-					System.out.println(e.attr("href"));
+					System.out.println(e.absUrl("href"));
 				}
 			});
 		} catch (InterruptedException e) {
