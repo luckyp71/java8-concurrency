@@ -18,7 +18,7 @@ public class Example1 {
 
 		ExecutorService ex = Executors.newWorkStealingPool();
 
-		// Example 1 (Callable):
+		// Example 1 (ExecutorSerivce and Callable):
 		List<Callable<Elements>> callables = Arrays.asList(() -> getUrls("https://www.oreilly.com"),
 				() -> getUrls("https://o7planning.org"), () -> getUrls("https://deeplearning4j.org"),
 				() -> getUrls("https://neo4j.com"), () -> getUrls("https://httpd.apache.org"),
@@ -44,7 +44,7 @@ public class Example1 {
 		}
 	}
 
-	// Example 1 (Callable): Define getUrls method to fetch listed urls on target
+	// Example 1 (ExecutorService and Callable): Define getUrls method to fetch listed urls on target
 	public static Elements getUrls(String url) {
 		Elements urls = null;
 		try {
