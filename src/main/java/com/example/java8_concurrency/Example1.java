@@ -42,6 +42,19 @@ public class Example1 {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		
+		// Example 2 (Runnable with Lambda)
+		Runnable r1 = ()->{
+			System.out.println("This is from thread "+Thread.currentThread().getName());
+		};
+		Thread t2 = new Thread(r1);
+		t2.start();
+		
+		// Example 3 (Thread with Lambda)
+		Thread t3 = new Thread(()-> {
+			System.out.println("This is from thread "+Thread.currentThread().getName());
+		});
+		t3.start();
 	}
 
 	// Example 1 (ExecutorService and Callable): Define getUrls method to fetch listed urls on target
